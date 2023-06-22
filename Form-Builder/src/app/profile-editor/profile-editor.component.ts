@@ -9,42 +9,27 @@ import { FormArray } from '@angular/forms';
   styleUrls: ['./profile-editor.component.css']
 })
 export class ProfileEditorComponent {
-  profileForm = this.fb.group({
-    firstName: ['', Validators.required],
-    Email: [''],
-    address: this.fb.group({
-      street: [''],
-      Verduras: [''],
-      Frutas: [''],
-      Carnicos: [''],
-      Otros: ['']
-    }),
-    aliases: this.fb.array([
-      this.fb.control('')
-    ])
+  Animal = this.fb.group({
+    animalName: ['', Validators.required],
+    Description: [''],
+    Specie: ['', Validators.required],
+    Picture: ['']
   });
-
-  get aliases() {
-    return this.profileForm.get('aliases') as FormArray;
-  }
 
   constructor(private fb: FormBuilder) { }
 
   updateProfile() {
-    this.profileForm.patchValue({
-      firstName: 'Nancy',
-      address: {
-        street: '123 Drew Street'
-      }
+    this.Animal.patchValue({
+      animalName: 'cat',
+      Description: '4 legged mammal, agile, and a hunter',
+      Specie: 'Felis catus',
+      Picture: 'https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
     });
   }
 
-  addAlias() {
-    this.aliases.push(this.fb.control(''));
-  }
 
   onSubmit() {
     // TODO: Use EventEmitter with form value
-    console.warn(this.profileForm.value);
+    console.warn(this.Animal.value);
   }
 }

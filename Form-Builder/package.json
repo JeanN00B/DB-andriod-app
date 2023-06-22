@@ -9,7 +9,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "dev": "nodemon angular.io-example"
   },
   "private": true,
   "dependencies": {
@@ -21,7 +22,16 @@
     "@angular/platform-browser": "^16.0.0",
     "@angular/platform-browser-dynamic": "^16.0.0",
     "@angular/router": "^16.0.0",
+    "@capacitor/android": "^5.0.5",
+    "@capacitor/camera": "^5.0.4",
+    "@capacitor/core": "^5.0.5",
     "angular-in-memory-web-api": "~0.16.0",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "mongodb": "^5.6.0",
+    "mongoose": "^7.2.3",
+    "mysql": "^2.18.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
@@ -30,6 +40,7 @@
     "@angular-devkit/build-angular": "^16.0.0",
     "@angular/cli": "^16.0.0",
     "@angular/compiler-cli": "^16.0.0",
+    "@capacitor/cli": "^5.0.5",
     "@types/jasmine": "~4.3.0",
     "@types/node": "^16.11.35",
     "copyfiles": "^2.4.1",
@@ -41,6 +52,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
+    "nodemon": "^2.0.22",
     "protractor": "~7.0.0",
     "ts-node": "~10.9.0",
     "typescript": "~4.9.3"

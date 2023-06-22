@@ -1,3 +1,7 @@
+form {
+  padding-top: 1rem;
+}
+
 label {
   font-weight: bold;
   padding-bottom: .5rem;

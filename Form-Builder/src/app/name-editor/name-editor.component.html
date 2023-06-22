@@ -1,6 +1,19 @@
-<label for="name">Name: </label>
-<input id="name" type="text" [formControl]="name">
-
-<p>Value: {{ name.value }}</p>
-
-<button type="button" (click)="updateName()">Update Name</button>
+<form [formGroup]="Plant" (ngSubmit)="onSubmit()">
+    <label for="animal-name">Plant name: </label>
+    <input id="animal-name" type="text" formControlName="plantName" required>
+  
+    <label for="specie-name">Specie: </label>
+    <input id="specie-name" type="text" formControlName="Specie">
+  
+    <label for="description">Description: </label>
+    <input id="description" type="text" formControlName="Description">
+  
+    <p>Complete the form to enable button.</p>
+    <button type="submit" [disabled]="!Plant.valid">Submit</button>
+  </form>
+  
+  <hr>
+  
+  <p>Form Value: {{ Plant.value | json }}</p>
+  
+  <p>Form Status: {{ Plant.status }}</p>
