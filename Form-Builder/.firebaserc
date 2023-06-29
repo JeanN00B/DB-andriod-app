@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "db-bioforms": {
+      "hosting": {
+        "angular.io-example": [
+          "db-bioforms"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "db-bioforms"
+  }
+}
