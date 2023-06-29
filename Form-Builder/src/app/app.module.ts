@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { NameEditorComponent } from './name-editor/name-editor.component';
-import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
+import { PlantEditorComponent } from './plant-editor/plant-editor.component';
+import { AnimalEditorComponent } from './animal-editor/animal-editor.component';
 import { ProductFormComponent } from './components/product-form/product-form.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
@@ -15,8 +15,8 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 @NgModule({
   declarations: [
     AppComponent,
-    NameEditorComponent,
-    ProfileEditorComponent,
+    PlantEditorComponent,
+    AnimalEditorComponent,
     ProductFormComponent,
   ],
   imports: [
