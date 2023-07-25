@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
-    <string name="app_name">BioForms</string>
-    <string name="title_activity_main">BioForms</string>
-    <string name="package_name">com.bioforms.myapp</string>
-    <string name="custom_url_scheme">com.bioforms.myapp</string>
-</resources>
