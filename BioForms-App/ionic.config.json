@@ -1,0 +1,12 @@
+{
+  "defaultProject": "BioForms-App",
+  "projects":{
+    "BioForms-App":{
+      "name": "BioForms-App",
+      "integrations": {
+        "capacitor": {}
+      },
+      "type": "angular"
+    }
+  }
+}
