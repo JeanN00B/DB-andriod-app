@@ -24,8 +24,37 @@ BioForms-App is designed to streamline the process of capturing biological data 
 ## Getting Started
 Follow these steps to get the BioForms-App up and running on your local environment:
 1. Clone this repository to your local machine.
-1. Install the required dependencies by running **'npm install'**.
-1. Launch the application on the web with **'ng serve -o'** or on Android with Capacitor support using **'ionic cap run android'**.
+   ```
+   https://github.com/JeanN00B/DB-andriod-app.git
+   ```
+1. Navigate to the project's root directory
+   ```
+   cd DB-android-app/BioForms-App/
+   ```
+1. Install the required dependencies by running **'npm install'** (assumming you already have installed angular 16 and node 18.x.
+   ```
+   npm install @ionic/angular
+   npm install @ionic-native/android-permissions
+   npm install @capacitor/geolocation
+   npm install @capacitor/camera
+   npm install @capacitor/app
+   npm install @capacitor/core
+   npm install @capacitor/cli
+   npm install @capacitor/android
+   npm install @awesome-cordova-plugins/geolocation
+   ```
+1. Launch the application on the web with **'ng serve -o'** to launch in localhost/4200. 
+   ```
+   ng serve -o
+   ```
+1. Build the application and sync the project with Capacitor.
+   ```
+   ionic cap sync
+   ```
+1. On Android you can run the project with Capacitor support using **'ionic cap run android'** (or opening android studio manually).
+   ```
+   ionic cap run android
+   ```
 
 ## Connecting to Supabase
 BioForms-App utilizes Supabase as the backend for data storage and retrieval. Supabase provides a secure and scalable database solution, enabling seamless data management for the application.
