@@ -1,1 +1,97 @@
-/* You can add global styles to this file, and also import other style files */
+/* Estilos generales para el cuerpo de la aplicación */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #547940;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .app-title {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    color: #ffffff; /* Color del texto en blanco */
+    text-shadow: 2px 2px 4px #000000; /* Filos negros con sombra */
+  }
+
+  /* Estilo para el botón de login.component.html */
+.login-button {
+    background-color: var(--button-background); /* Utiliza la variable --button-background para el fondo del botón */
+    color: var(--button-text); /* Utiliza la variable --button-text para el color del texto del botón */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  /* Clase para centrar elementos horizontalmente y verticalmente */
+  .center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  /* Estilos para los formularios */
+  
+  /* Estilos para los títulos de sección */
+  .section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para los campos de formulario */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="password"],
+  .form-group select {
+    border: 1px solid #000000;
+    border-radius: 4px;
+    padding: 8px;
+  }
+  
+  .form-group button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.2s;
+  }
+  
+  .form-group button:hover {
+    background-color: #0056b3;
+  }
+  
+  
+  /* Estilos para el botón de logout */
+  .logout-button {
+    background-color: #dc3545;
+  }
+  
+  .logout-button:hover {
+    background-color: #c82333;
+  }
+
+  /* Colores de contraste */
+:root {
+    --text-color: #c21212; /* Texto en color blanco */
+    --button-background: #ffffff; /* Fondo de botones en color blanco */
+    --button-text: #19c37d; /* Texto de botones en color #19c37d */
+  }

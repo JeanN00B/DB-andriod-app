@@ -1,50 +1,61 @@
+<div class="center-container">
+    <div class="form-wrapper">
+      <div class="left-column">
+        <form (ngSubmit)="onSubmit()" class="form-group">
+          <label>
+            Category:
+            <select name="category" [(ngModel)]="formData.category">
+              <option value="animal">Animal</option>
+              <option value="plant">Plant</option>
+              <option value="fungus">Fungus</option>
+              <option value="insect">Insect</option>
+            </select>
+          </label>
+          <label>
+            Name:
+            <input type="text" name="name" [(ngModel)]="formData.name">
+          </label>
+          <label>
+            Specie:
+            <input type="text" name="specie" [(ngModel)]="formData.species">
+          </label>
+          <label>
+            Description:
+            <input type="text" name="description" [(ngModel)]="formData.description">
+          </label>
+          <div class="location-group">
+            <label>Location:</label>
+            <div class="coordinates-group">
+              <div class='containers-xyz'> 
+                <label>X: </label>
+                <input type="text" [value]="locationData?.latitude" disabled>
+              </div>
+              <div class='containers-xyz'>              
+                <label>Y: </label>
+                <input type="text" [value]="locationData?.longitude" disabled>
+              </div>
+            </div>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      
+      <div class="right-column">
+        <div class="image-preview">
+          
+          <div class="photo-container">
+            <img [src]="photoData" *ngIf="photoData; else placeholderImage" alt="Photo Preview">
+            <ng-template #placeholderImage>
+              <img src="assets/camera-icon.png" alt="camera-icon">
+            </ng-template>  
+          </div>
 
-<form (ngSubmit)="onSubmit()">
-    <label>
-        Category:
-        <select name="category" [(ngModel)]="formData.category">
-            <option value="animal">Animal</option>
-            <option value="plant">Plant</option>
-            <option value="fungus">Fungus</option>
-            <option value="insect">Insect</option>
-        </select>
-    </label>
-    <label>
-        Name:
-        <input type="text" name="name" [(ngModel)]="formData.name">
-    </label>
-    <label>
-        Specie:
-        <input type="text" name="specie" [(ngModel)]="formData.species">
-    </label>
-    <label>
-        Description:
-        <input type="text" name="description" [(ngModel)]="formData.description">
-    </label>
-    <!--<app-location (locationData)="onLocationDataReceived($event)"></app-location>
-    <app-photo (photoData)="onPhotoDataReceived($event)"></app-photo>-->    
-
-    <div>
-        <label>Latitude:</label>
-        <input type="text" [value]="locationData?.latitude" disabled>
-        <label>Longitude:</label>
-        <input type="text" [value]="locationData?.longitude" disabled>
+            <button *ngIf="platform.is('cordova')" type="button" (click)="takePhoto()">Take a Photo</button>
+            <button type="button" (click)="selectPhoto()">Select a Photo</button>
+          
+        </div>
+      </div>
     </div>
-
-    <div *ngIf="photoData">
-        <img [src]="photoData" alt="Photo Preview" style="max-height: 350px; max-width: 350px;">
-    </div>
-    <div *ngIf="!photoData">
-        <img src="assets/camera-icon.png" alt="camera-icon" style="max-height: 350px; max-width: 350px;">
-    </div>
-    <button *ngIf="platform.is('cordova')" type="button" (click)="takePhoto()">Take a Photo</button>
-    <button type="button" (click)="selectPhoto()">Select a Photo</button>
-
-<!--    <ng-template #placeholderImage>
-        <img src="assets/camera-icon.png" style="max-height: 300px; max-width: 300px;">
-    </ng-template>-->
-
-    <button type="submit">Submit</button>
-  </form>
-
-  <button (click)="onLogout()">Logout</button>
+    <button (click)="onLogout()" class="logout-button">Logout</button>
+  </div>
+  

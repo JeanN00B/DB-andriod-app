@@ -1,0 +1,77 @@
+/* login.component.css */
+
+/* Estilos para el contenedor principal */
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Color de fondo global */
+  }
+  
+  /* Estilos para la caja de login */
+  .login-container {
+    background-color: #b67140; /* Color café */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    box-shadow: 0 0 10px #000000; /* Marco de color negro */
+  }
+  
+  /* Estilos para el título del login */
+  .section-title {
+    color: #ffffff; /* Color blanco para el texto del título */
+    text-align: center; /* Centrar el título */
+    margin-bottom: 20px; /* Espaciado hacia abajo */
+    font-size: 40px;
+  }
+  
+  /* Estilos para las etiquetas y campos de texto dentro de la caja */
+  .form-group label {
+    color: #ffffff; /* Color blanco para el texto */
+  }
+  
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+  color: #000000; /* Color negro para el texto de los inputs */
+  /* Aquí puedes agregar cualquier otro estilo que desees para los inputs */
+}
+  /* Estilos para el botón de login */
+  button[type="submit"] {
+    margin-top: 10px; /* Espaciado hacia arriba */
+    background-color: #188f6b; /* Color verde obscuro */
+    color: #ffffff; /* Color blanco para el texto del botón */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Cambiar el color del botón al pasar el mouse por encima */
+  button[type="submit"]:hover {
+    background-color: #19c37d; /* Un tono más oscuro de verde */
+  }
+  
+  /* Media Query para dispositivos con un ancho máximo de 768px (como tabletas y teléfonos) */
+  @media (max-width: 768px) {
+    .login-container {
+      max-width: 90%; /* Reducir el ancho máximo de la caja */
+    }
+  
+    .section-title {
+      font-size: 30px; /* Reducir el tamaño del título en dispositivos más pequeños */
+    }
+  }
+  
+  /* Media Query para dispositivos con un ancho máximo de 576px (como teléfonos móviles) */
+  @media (max-width: 576px) {
+    .section-title {
+      font-size: 24px; /* Reducir aún más el tamaño del título en dispositivos más pequeños */
+    }
+
+    .login-text {
+        color: #000000; /* Cambiar el color del texto a negro */
+      }
+  }
+  

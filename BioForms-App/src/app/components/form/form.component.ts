@@ -34,7 +34,6 @@ export class FormComponent implements OnDestroy, OnInit {
   ngOnInit() {
     const options = {
       enableHighAccuracy: false,
-      timeout: 4000,
       maximumAge: 0
     };
 

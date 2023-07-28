@@ -1,0 +1,224 @@
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  color: #000000; /* Color negro para el texto de los inputs */
+  /* Aquí puedes agregar cualquier otro estilo que desees para los inputs */
+}
+
+.center-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 20px; /* Agregar un margen de 20px a todos los lados del contenedor */
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  flex: 1;
+}
+
+.left-column {
+  flex: 1;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column; /* Asegurar que los elementos se apilen verticalmente */
+}
+
+.right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; /* Agregar posición relativa al contenedor */
+  margin-top: 10px; /* Agregar margen superior para separar los contenedores */
+}
+
+.image-preview img {
+  max-height: 100%; /* Hacer que la imagen tenga el tamaño máximo posible */
+  max-width: 100%;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 700px;
+}
+
+.image-preview{
+  flex: 0;
+  position: relative;
+  margin-bottom: 0;
+}
+
+.image-preview{
+  max-width: 100%;
+  max-height: 100%;
+  margin-bottom: 0;
+  color: #ffffff; /* Color negro para el texto del formulario */
+  background-color: #b67140; /* Color de fondo para las cajas contenedoras */
+  padding: 10px; /* Espaciado interno de 10px para las cajas contenedoras */
+  border-radius: 4px; /* Bordes redondeados para las cajas contenedoras */
+  position:relative;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  color: #ffffff; /* Color negro para el texto del formulario */
+  background-color: #b67140; /* Color de fondo para las cajas contenedoras */
+  padding: 10px; /* Espaciado interno de 10px para las cajas contenedoras */
+  border-radius: 4px; /* Bordes redondeados para las cajas contenedoras */
+}
+
+.photo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-container img {
+  max-height: 100%; /* Ajustar la imagen a la altura máxima del contenedor */
+  max-width: 100%; /* Ajustar la imagen al ancho máximo del contenedor */
+  max-height: fit-content;
+}
+
+.photo-container button {
+  width: 100%; /* Ajustar la imagen al ancho máximo del contenedor */
+  display: flex;
+  flex-wrap: wrap; /* Permitir que los botones se ajusten automáticamente en dispositivos pequeños */
+  justify-content: center; /* Centrar los botones horizontalmente */
+  position: absolute; /* Cambiar la posición a absoluta para que se superponga al image-preview */
+  bottom: 10px; /* Ajustar el posicionamiento desde abajo */
+  left: 50%; /* Ajustar el posicionamiento horizontalmente */
+  transform: translateX(-50%); /* Centrar horizontalmente con transformación */
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group select {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  color: #000000; /* Color negro para el texto de los campos de texto y select */
+  box-sizing: border-box; /* Ajustar el ancho total, incluyendo el borde y el relleno */
+}
+
+
+.location-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.coordinates-group {
+  display: flex;
+  align-items: center;
+  margin-right: 10px; /* Espaciado de 10px entre los contenedores de X y Y */
+}
+
+.containers-xyz {
+  display: flex;
+  align-items: center;
+  margin-right: 5px; /* Espaciado derecho entre los contenedores */
+}
+
+.containers-xyz label {
+  margin-right: 5px;
+}
+
+.containers-xyz input[type="text"] {
+  border: 1px solid #ccc;
+  background-color: rgba(255, 255, 255);
+  border-radius: 4px;
+  padding: 8px;
+  color: #000000; /* Color negro para el texto del input */
+  box-sizing: border-box; /* Ajustar el ancho total, incluyendo el borde y el relleno */
+}
+
+.coordinates-group label {
+  margin-right: 5px;
+}
+
+button {
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: background-color 0.2s;
+  margin-top: 10px; /* Agregar espacio superior al botón */
+  width: 100%;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.logout-button {
+  background-color: #dc3545;
+  margin-top: 20px;
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+}
+
+
+/* Media Query para dispositivos con un ancho máximo de 576px (como teléfonos móviles) */
+@media (max-width: 576px) {
+  .form-wrapper {
+    flex-direction: column; /* Cambiar a una sola columna en dispositivos más pequeños */
+  }
+  
+  .left-column,
+  .right-column {
+    flex: 1; /* Hacer que ambas columnas ocupen todo el ancho en dispositivos más pequeños */
+    padding-right: 0; /* Eliminar el espaciado derecho en dispositivos más pequeños */
+    margin-bottom: 20px; /* Espaciado entre las columnas en dispositivos más pequeños */
+  }
+
+   /* Ajustar el orden de los elementos para que la columna de la derecha aparezca primero */
+   .right-column {
+    order: -1;
+    margin-bottom: 20px;
+  }
+
+  .image-preview img {
+    max-height: 100%; /* Reducir el tamaño de la imagen en dispositivos más pequeños */
+    max-width: 100%;
+  }
+  .image-preview{
+    flex: 1;
+    position: relative;
+    margin-bottom: 0;
+  }
+
+  .image-preview{
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0;
+    color: #ffffff; /* Color negro para el texto del formulario */
+    background-color: #b67140; /* Color de fondo para las cajas contenedoras */
+    padding: 10px; /* Espaciado interno de 10px para las cajas contenedoras */
+    border-radius: 4px; /* Bordes redondeados para las cajas contenedoras */
+    position:relative;
+  }
+
+  .photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
