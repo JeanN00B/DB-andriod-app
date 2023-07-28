@@ -40,7 +40,7 @@ Data validation is a crucial aspect of BioForms-App to ensure that accurate and 
 ## Screenshots
 ### Web version
 ![Web interface Log-In](Screenshots/web1.png)
-![Web interface forms](Screenshots/web2.png)
+![Web interface forms](Screenshots/web3.png)
 ### Mobile android version
 ![Mobile interface Log-In](Screenshots/mob1.jpeg)
 ![Mobile interface with image container loader](Screenshots/mob4.jpeg)
