@@ -39,12 +39,12 @@ Data validation is a crucial aspect of BioForms-App to ensure that accurate and 
 
 ## Screenshots
 ### Web version
-![Web interface Log-In](Screenshots/web1)
-![Web interface forms](Screenshots/web2)
+![Web interface Log-In](Screenshots/web1.jpeg)
+![Web interface forms](Screenshots/web2.jpeg)
 ### Mobile android version
-![Mobile interface Log-In](Screenshots/mob1)
-![Mobile interface with image container loader](Screenshots/mob4)
-![Mobile interface with forms, geolocalization information](Screenshots/mob5)
+![Mobile interface Log-In](Screenshots/mob1.jpeg)
+![Mobile interface with image container loader](Screenshots/mob4.jpeg)
+![Mobile interface with forms, geolocalization information](Screenshots/mob5.jpeg)
 
 ## License
 This project is licensed under the MIT License. Feel free to use and modify this codebase according to the terms of the license.
